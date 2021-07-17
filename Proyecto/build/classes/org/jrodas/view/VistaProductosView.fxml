@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jrodas.controller.ProductosController">
+   <children>
+      <Pane prefHeight="375.0" prefWidth="657.0" style="-fx-background-color: #2ACE9D;" />
+      <ImageView fitHeight="366.0" fitWidth="637.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Fondo%20madera.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="17.0" layoutY="150.0" prefHeight="24.0" prefWidth="66.0" text="Cantidad">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="110.0" prefHeight="24.0" prefWidth="129.0" text="Nombre Producto">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCodigoProductos" layoutX="338.0" layoutY="22.0" onMouseClicked="#seleccionarElemento" prefHeight="330.0" prefWidth="294.0">
+        <columns>
+          <TableColumn fx:id="colCodigoProductos" prefWidth="50.0" text="Código" />
+          <TableColumn fx:id="colNombreProductos" prefWidth="167.0" text="Nombre Producto" />
+            <TableColumn fx:id="colCantidadProductos" prefWidth="76.0" text="Cantidad" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtCantidadProductos" layoutX="155.0" layoutY="146.0" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Cantidad" />
+      <TextField fx:id="txtNombreProductos" layoutX="155.0" layoutY="109.0" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Nombre " style="-fx-background-color: #ffffff;" />
+      <TextField fx:id="txtCodigoProductos" layoutX="155.0" layoutY="71.0" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Código" />
+      <Button fx:id="btnNuevo" layoutX="17.0" layoutY="220.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="55.0" prefWidth="85.0" text="Nuevo">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnModificar" layoutX="231.0" layoutY="220.0" mnemonicParsing="false" onAction="#modificar" prefHeight="55.0" prefWidth="85.0" text="Modificar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnReporte" layoutX="17.0" layoutY="295.0" mnemonicParsing="false" onAction="#reporte" prefHeight="55.0" prefWidth="85.0" text="Cancelar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnEliminar" layoutX="125.0" layoutY="220.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="55.0" prefWidth="85.0" text="Eliminar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <ImageView fitHeight="82.0" fitWidth="106.0" layoutX="127.0" layoutY="282.0" onMouseClicked="#RegresoPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Chef.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="133.0" layoutY="22.0" text="Productos">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="74.0" prefHeight="21.0" prefWidth="129.0" text="Código">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

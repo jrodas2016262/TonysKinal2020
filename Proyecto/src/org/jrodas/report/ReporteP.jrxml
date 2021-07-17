@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteP" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b666f603-2457-4fbd-8c7b-27c7ea740891">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codPlato" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\Proyecto\\src\\org\\jrodas\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call ReportePlatos($P{codPlato});]]>
+	</queryString>
+	<field name="productos_CodigoProducto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="platos_CodigoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CodigoProducto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CodigoTipoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802">
+			<image>
+				<reportElement x="201" y="213" width="175" height="152" uuid="a8d81cbb-439f-4a57-b879-a2d60877126a"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\Proyecto\\src\\org\\jrodas\\img\\Fondo Chef.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="286" height="79" uuid="7d9a10ab-3606-449d-abc3-0ee60855edfc"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\Proyecto\\src\\org\\jrodas\\img\\Fondo madera.jpg"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement x="286" y="0" width="269" height="79" uuid="419a2bc0-f4e9-48d6-9d1e-95e7ad2735dc"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\Proyecto\\src\\org\\jrodas\\img\\Fondo madera 2.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="0" width="83" height="79" uuid="645a1c7f-dfc1-48b8-bf57-5bdf283af652"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\Proyecto\\src\\org\\jrodas\\img\\Chef.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="79" uuid="11c9c876-6042-426d-9960-401c3d247aa8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Viner Hand ITC" size="40"/>
+				</textElement>
+				<text><![CDATA[Platos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="85" splitType="Stretch">
+			<rectangle radius="15">
+				<reportElement mode="Opaque" x="0" y="6" width="555" height="79" forecolor="#009999" backcolor="#99FFFF" uuid="05ab0699-4a59-4d02-8a43-b36ec08a4051"/>
+			</rectangle>
+			<subreport>
+				<reportElement x="0" y="0" width="555" height="45" uuid="80f5f34f-a8ae-4920-a674-cafb7fa4b0e1"/>
+				<subreportParameter name="codPlato">
+					<subreportParameterExpression><![CDATA[$P{codPlato}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReporteP.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="22" y="12" width="100" height="20" uuid="deb9046c-bc12-4fce-9fd9-01e3f2762b2a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="12" width="112" height="20" uuid="934d23f0-ab3e-49cd-aec0-78c099c27259"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Producto]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="34" width="555" height="1" uuid="31857d56-d52f-41e0-913d-b6c497b9d62b"/>
+			</line>
+			<line>
+				<reportElement x="0" y="36" width="555" height="1" uuid="af347f66-eff8-4c56-ae41-fa42be39b5da"/>
+			</line>
+			<staticText>
+				<reportElement x="396" y="12" width="159" height="20" uuid="7a2b11ff-2777-4967-ba69-2b4a8594dd99"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unidades adquiridas]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="22" y="8" width="100" height="20" uuid="0680e6a7-e12a-421a-9ba2-624b2123048a"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CodigoProducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="178" y="8" width="198" height="20" uuid="24da6494-5fb1-4ae3-8a91-6df4b53bdfd7"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NombreProducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="8" width="100" height="20" uuid="10aeae5e-188f-468b-9bad-aa77673f31db"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cantidad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="50" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

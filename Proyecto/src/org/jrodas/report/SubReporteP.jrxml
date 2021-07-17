@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubReporteP" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0663eb7a-75db-488b-b473-f04a83eb9d93">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codPlato" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_SubReportePlatos($P{codPlato});]]>
+	</queryString>
+	<field name="CodigoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NombrePlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PrecioPlato" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="F_TipoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="productos_CodigoProducto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="platos_CodigoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="41" y="2" width="100" height="20" uuid="d18ea031-3b88-400a-8616-2773fee2dd81"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="205" y="2" width="100" height="20" uuid="f7e83f75-ccdd-43f5-b415-ab64d2f2932e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="374" y="2" width="100" height="20" uuid="b70a4e89-0cc5-4f3b-a9f2-aa34162baafb"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<textField>
+				<reportElement x="41" y="13" width="100" height="20" uuid="184c3e52-ec12-4090-a7e8-025c6841c643"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NombrePlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="205" y="13" width="100" height="20" uuid="cf9aaf2c-9e32-41c3-9ed4-a418a3ad1ae4"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PrecioPlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="374" y="13" width="100" height="20" uuid="bc32a9e6-09e9-4c2a-8976-2122aafe6b36"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cantidad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

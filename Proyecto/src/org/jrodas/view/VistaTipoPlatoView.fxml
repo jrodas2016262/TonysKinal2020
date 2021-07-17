@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jrodas.controller.TipoPlatoController">
+   <children>
+      <Pane prefHeight="375.0" prefWidth="657.0" style="-fx-background-color: #2ACE9D;" />
+      <ImageView fitHeight="366.0" fitWidth="637.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Fondo%20madera.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="17.0" layoutY="120.0" prefHeight="24.0" prefWidth="94.0" text="Descripción">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="75.0" prefHeight="24.0" prefWidth="129.0" text="Código">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCodigoTipoPlato" layoutX="338.0" layoutY="22.0" onMouseClicked="#seleccionarElementos" prefHeight="330.0" prefWidth="294.0">
+        <columns>
+          <TableColumn fx:id="colCodigoTipoPlato" prefWidth="50.0" text="Código" />
+          <TableColumn fx:id="colDescripcionTipoPlato" prefWidth="243.0" text="Descripción" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtDescripcionTipoPlato" layoutX="155.0" layoutY="116.0" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Descripción" />
+      <TextField fx:id="txtCodigoTipoPlato" layoutX="155.0" layoutY="74.0" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Código" style="-fx-background-color: #ffffff;" />
+      <Button fx:id="btnNuevo" layoutX="17.0" layoutY="220.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="55.0" prefWidth="85.0" text="Nuevo">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnModificar" layoutX="231.0" layoutY="220.0" mnemonicParsing="false" onAction="#modificar" prefHeight="55.0" prefWidth="85.0" text="Modificar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnReporte" layoutX="17.0" layoutY="295.0" mnemonicParsing="false" onAction="#reporte" prefHeight="55.0" prefWidth="85.0" text="Cancelar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnEliminar" layoutX="125.0" layoutY="220.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="55.0" prefWidth="85.0" text="Eliminar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <ImageView fitHeight="82.0" fitWidth="106.0" layoutX="127.0" layoutY="281.0" onMouseClicked="#RegresoPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Chef.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="114.0" layoutY="22.0" text="Tipo Plato">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="245.0" layoutY="292.0" onMouseClicked="#ventanaPlatos" prefHeight="55.0" prefWidth="58.0" text="Platos">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jrodas.controller.PlatosController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="696.0" style="-fx-background-color: #2ACE9D;" />
+      <ImageView fitHeight="404.0" fitWidth="677.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Fondo%20madera.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="20.0" layoutY="96.0" prefHeight="24.0" prefWidth="106.0" text="Cantidad">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="130.0" prefHeight="24.0" prefWidth="106.0" text="Nombre Plato">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="163.0" prefHeight="24.0" prefWidth="75.0" text="Precio">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="201.0" prefHeight="24.0" prefWidth="82.0" text="Tipo Plato">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCodigoPlatos" layoutX="338.0" layoutY="22.0" onMouseClicked="#seleccionarElemento" prefHeight="352.0" prefWidth="334.0">
+        <columns>
+            <TableColumn fx:id="colCodigoPlatos" prefWidth="50.0" text="Código" />
+          <TableColumn fx:id="colCantidadPlatos" prefWidth="60.0" text="Cantidad" />
+          <TableColumn fx:id="colNombrePlatos" prefWidth="122.0" text="Nombre" />
+            <TableColumn fx:id="colPrecioPlatos" prefWidth="58.0" text="Precio" />
+            <TableColumn fx:id="colTipoPlatos" prefWidth="45.0" text="Tipo" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtPrecioPlatos" layoutX="133.0" layoutY="165.0" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Precio" />
+      <TextField fx:id="txtNombrePlatos" layoutX="133.0" layoutY="129.0" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Nombre" style="-fx-background-color: #ffffff;" />
+      <TextField fx:id="txtCantidadPlatos" layoutX="133.0" layoutY="93.0" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Cantidad" style="-fx-background-color: #ffffff;" />
+      <Button fx:id="btnNuevo" layoutX="19.0" layoutY="246.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="55.0" prefWidth="85.0" text="Nuevo">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnModificar" layoutX="234.0" layoutY="246.0" mnemonicParsing="false" onAction="#modificar" prefHeight="55.0" prefWidth="85.0" text="Modificar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnReporte" layoutX="19.0" layoutY="316.0" mnemonicParsing="false" onAction="#reporte" prefHeight="55.0" prefWidth="85.0" text="Reporte">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnEliminar" layoutX="126.0" layoutY="246.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="55.0" prefWidth="85.0" text="Eliminar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <ComboBox fx:id="tmbTipoPlatos" layoutX="133.0" layoutY="199.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="172.0" promptText="Código Plato" />
+      <ImageView fitHeight="82.0" fitWidth="106.0" layoutX="128.0" layoutY="303.0" onMouseClicked="#RegresoPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Chef.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="144.0" layoutY="22.0" text="Platos">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="61.0" prefHeight="21.0" prefWidth="106.0" text="Código">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoPlatos" layoutX="133.0" layoutY="58.0" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Código" />
+      <Label layoutX="225.0" layoutY="310.0" onMouseClicked="#RegresoTipoPlato" prefHeight="55.0" prefWidth="106.0" text="Tipo Platos">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

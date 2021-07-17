@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="369.0" prefWidth="630.0" style="-fx-background-color: #FAFAFA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jrodas.controller.Servicios_has_PlatosController">
+   <children>
+      <BorderPane prefHeight="369.0" prefWidth="630.0" style="-fx-background-color: #2ace9d;">
+         <center>
+            <ImageView fitHeight="379.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../img/Fondo%20madera.jpg" />
+               </image>
+            </ImageView>
+         </center></BorderPane>
+      <ComboBox fx:id="cmbCodigoPlato" layoutX="300.0" layoutY="120.0" prefHeight="30.0" prefWidth="200.0" promptText="CódigoPlato" />
+      <Label layoutX="30.0" layoutY="83.0" text="Código Servicio">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="83.0" text="Código Plato">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoServicios" layoutX="30.0" layoutY="120.0" prefHeight="30.0" prefWidth="200.0" promptText="Código Servicio" />
+      <TableView fx:id="tblServiciosHasPlatos" layoutX="27.0" layoutY="165.0" onMouseClicked="#seleccionarElemento" prefHeight="175.0" prefWidth="575.0">
+        <columns>
+          <TableColumn fx:id="colServicios" prefWidth="287.0" text="Código Serivicios" />
+          <TableColumn fx:id="colPlato" prefWidth="287.0" text="Código Plato" />
+        </columns>
+      </TableView>
+      <Label layoutX="209.0" layoutY="23.0" text="Servivios_has_Platos">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="73.0" fitWidth="74.0" layoutX="543.0" layoutY="17.0" onMouseClicked="#RegresoPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Chef.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

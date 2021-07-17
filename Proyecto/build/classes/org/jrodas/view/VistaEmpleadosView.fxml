@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jrodas.controller.EmpleadosController">
+   <children>
+      <Pane prefHeight="457.0" prefWidth="801.0" style="-fx-background-color: #2ACE9D;" />
+      <ImageView fitHeight="457.0" fitWidth="785.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Fondo%20madera.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="20.0" layoutY="91.0" prefHeight="24.0" prefWidth="106.0" text="Nombres">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="241.0" prefHeight="24.0" prefWidth="106.0" text="Tipo Empleado">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="129.0" prefHeight="24.0" prefWidth="106.0" text="Apellidos">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="166.0" prefHeight="24.0" prefWidth="106.0" text="Dirección">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="203.0" prefHeight="24.0" prefWidth="106.0" text="Teléfono">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCodigoEmpleados" layoutX="338.0" layoutY="22.0" onMouseClicked="#seleccionarElementos" prefHeight="418.0" prefWidth="445.0">
+        <columns>
+            <TableColumn fx:id="colCodigoEmpleados" prefWidth="50.0" text="Código" />
+          <TableColumn fx:id="colNombreEmpleados" prefWidth="90.0" text="Nombres" />
+          <TableColumn fx:id="colApellidoEmpleados" prefWidth="90.0" text="Apellidos" />
+            <TableColumn fx:id="colDireccionEmpleados" prefWidth="90.0" text="Dirección" />
+            <TableColumn fx:id="colTelefonoEmpleados" prefWidth="82.0" text="Telefono" />
+            <TableColumn fx:id="colTipoEmpleados" prefWidth="45.0" text="Tipo" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtDireccionEmpleados" layoutX="133.0" layoutY="163.0" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Dirección" />
+      <TextField fx:id="txtApellidoEmpleados" layoutX="133.0" layoutY="126.0" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Apellidos" style="-fx-background-color: #ffffff;" />
+      <TextField fx:id="txtNombreEmpleados" layoutX="133.0" layoutY="89.0" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Nombres" style="-fx-background-color: #ffffff;" />
+      <TextField fx:id="txtTelefonoEmpleados" layoutX="134.0" layoutY="200.0" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Teléfono" style="-fx-background-color: #ffffff;" />
+      <Button fx:id="btnNuevo" layoutX="20.0" layoutY="284.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="55.0" prefWidth="85.0" text="Nuevo">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnModificar" layoutX="232.0" layoutY="284.0" mnemonicParsing="false" onAction="#modificar" prefHeight="55.0" prefWidth="85.0" text="Modificar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnReporte" layoutX="20.0" layoutY="365.0" mnemonicParsing="false" onAction="#reporte" prefHeight="55.0" prefWidth="85.0" text="Cancelar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnEliminar" layoutX="126.0" layoutY="284.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="55.0" prefWidth="85.0" text="Eliminar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <ComboBox fx:id="cmbTipoEmpleados" layoutX="134.0" layoutY="238.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="172.0" promptText="Código Empresa" />
+      <ImageView fitHeight="82.0" fitWidth="106.0" layoutX="128.0" layoutY="349.0" onMouseClicked="#RegresoPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Chef.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="125.0" layoutY="22.0" text="Empleados">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoEmpleados" layoutX="133.0" layoutY="52.0" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Código" />
+      <Label layoutX="20.0" layoutY="57.0" prefHeight="21.0" prefWidth="102.0" text="Código">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="211.0" layoutY="379.0" onMouseClicked="#RegresoTipoEmpleado" text="Tipo Empleado">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

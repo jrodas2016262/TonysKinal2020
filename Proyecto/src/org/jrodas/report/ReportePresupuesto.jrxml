@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePresupuesto" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="184919fa-2fe9-4079-9df4-87cfc59a2e04">
+	<property name="ireport.zoom" value="1.0000000000000009"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="conEm" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\Proyecto\\src\\org\\jrodas\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ListarReportePresupuesto($P{conEm});]]>
+	</queryString>
+	<field name="CodigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DireccionEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Telefono" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CodigoServicios" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="FechaServicios" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DescripcionServicios" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="HoraServicios" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DireccionServicios" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="F_CodigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802" splitType="Stretch">
+			<image>
+				<reportElement x="202" y="285" width="175" height="152" uuid="e19e0415-3d3b-4c01-ace7-adddd317ede8"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\Proyecto\\src\\org\\jrodas\\img\\Fondo Chef.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="286" height="79" uuid="437d791a-0045-4a81-99a8-6af3bd7d1bca"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\Proyecto\\src\\org\\jrodas\\img\\Fondo madera.jpg"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement x="286" y="0" width="269" height="79" uuid="a1ca2a0b-70c1-4f32-bbbe-a90e377f22ea"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\Proyecto\\src\\org\\jrodas\\img\\Fondo madera 2.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="0" width="83" height="79" uuid="afa10a52-19a9-4e62-b8ef-00642648c475"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\Proyecto\\src\\org\\jrodas\\img\\Chef.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="79" uuid="a82e4603-8244-4611-a183-3957aa475fe5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Viner Hand ITC" size="40"/>
+				</textElement>
+				<text><![CDATA[Presupuesto]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="119" splitType="Stretch">
+			<rectangle radius="15">
+				<reportElement mode="Opaque" x="0" y="12" width="555" height="65" forecolor="#009999" backcolor="#99FFFF" uuid="258f2017-3b6c-4010-b638-8174c75d791f"/>
+			</rectangle>
+			<textField>
+				<reportElement x="175" y="23" width="119" height="20" uuid="c9d93e74-3b55-43e5-93e0-d09ec07eee1b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="22" width="135" height="20" uuid="aa21eb1a-11df-4e87-a690-d20e99d8d4b4"/>
+				<textElement>
+					<font fontName="Calibri" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre de la Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="44" width="152" height="20" uuid="3b10b18e-8d6a-46c9-a114-cc2ecce1d5a7"/>
+				<textElement>
+					<font fontName="Calibri" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección de la Empresa]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="175" y="46" width="126" height="20" uuid="9d58026a-79eb-462e-a1c0-0ce20f269f3a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DireccionEmpresa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="377" y="22" width="138" height="20" uuid="705ddcbb-b580-44ea-9d4d-a1b9d595eaeb"/>
+				<textElement>
+					<font fontName="Calibri" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono de la Empresa]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="378" y="47" width="100" height="20" uuid="887eb9db-73d4-4fde-ae27-d9e3bd62e646"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Telefono}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="2" y="77" width="553" height="39" uuid="2b6007ad-794c-4d8d-b5ad-521227ce2f4c"/>
+				<subreportParameter name="codEm">
+					<subreportParameterExpression><![CDATA[$P{conEm}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReportePresupuesto.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="36" width="555" height="1" uuid="618878b0-055d-4a6f-b218-9be872b208aa"/>
+			</line>
+			<line>
+				<reportElement x="0" y="34" width="555" height="1" uuid="791a1d30-e32b-4fe7-8b31-b625d2ad9842"/>
+			</line>
+			<staticText>
+				<reportElement x="15" y="9" width="87" height="20" uuid="c271e647-402c-4fe5-a444-23918406e394"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="9" width="76" height="20" uuid="4d0ed61b-33cb-4766-890d-fd04e6ed1229"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="9" width="126" height="20" uuid="fc8a1d7c-3d4c-4ada-8c44-dc24b788ad59"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección Servicio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField pattern="MM/dd/yyyy">
+				<reportElement x="15" y="5" width="111" height="20" uuid="ac0e2f80-24ce-4a1a-b716-a57c57128337"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FechaServicios}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm.ss">
+				<reportElement x="202" y="5" width="100" height="20" uuid="eacffb1b-ca14-4167-a086-b150f88cf1ce"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HoraServicios}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="5" width="185" height="20" uuid="87de646d-396c-4d91-8bf8-3549ac08df5c"/>
+				<textFieldExpression><![CDATA[$F{DireccionServicios}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

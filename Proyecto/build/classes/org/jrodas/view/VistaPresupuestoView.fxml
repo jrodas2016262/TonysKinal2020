@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jrodas.controller.PresupuestoController">
+   <children>
+      <Pane layoutX="-4.0" prefHeight="400.0" prefWidth="701.0" style="-fx-background-color: #2ACE9D;" />
+      <ImageView fitHeight="378.0" fitWidth="674.0" layoutX="8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Fondo%20madera.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblCodigoPresupuesto" layoutX="338.0" layoutY="22.0" onMouseClicked="#seleccionarElemento" prefHeight="347.0" prefWidth="330.0">
+        <columns>
+            <TableColumn fx:id="colCodigoPresupuesto" prefWidth="50.0" text="Código" />
+          <TableColumn fx:id="colFechaPresupuesto" prefWidth="100.0" text="Fecha" />
+          <TableColumn fx:id="colCantidadPresupuesto" prefWidth="120.0" text="Cant. presupuesto" />
+            <TableColumn fx:id="colCodigoEmpresaPresupuesto" prefWidth="60.0" text="Empresa" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="20.0" layoutY="232.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="55.0" prefWidth="85.0" text="Nuevo">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnModificar" layoutX="244.0" layoutY="232.0" mnemonicParsing="false" onAction="#modificar" prefHeight="55.0" prefWidth="85.0" text="Modificar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnReporte" layoutX="20.0" layoutY="310.0" mnemonicParsing="false" onAction="#reporte" prefHeight="55.0" prefWidth="85.0" text="Reporte">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button fx:id="btnEliminar" layoutX="133.0" layoutY="232.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="55.0" prefWidth="85.0" text="Eliminar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <ImageView fitHeight="82.0" fitWidth="106.0" layoutX="134.0" layoutY="297.0" onMouseClicked="#RegresoPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Chef.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="129.0" layoutY="22.0" text="Presupuesto">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="298.0" onMouseClicked="#RegresoEmpresas" prefHeight="62.0" prefWidth="89.0" text="Empresa">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="grpFechaPresupuesto" layoutX="20.0" layoutY="60.0" prefHeight="102.0" prefWidth="309.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="141.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="168.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Código">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label prefHeight="24.0" prefWidth="114.0" text="Fecha Solicitud" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label prefHeight="24.0" prefWidth="129.0" text="Cant. Presupuesto" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoPresupuesto" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Código" GridPane.columnIndex="1" />
+            <TextField fx:id="txtCantidadPresupuesto" prefHeight="30.0" prefWidth="172.0" promptText="Ingresar Presupuesto" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <ComboBox fx:id="cmbEmpresaPresupuesto" layoutX="162.0" layoutY="170.0" prefHeight="30.0" prefWidth="168.0" promptText="Código Empresa" />
+      <Label layoutX="20.0" layoutY="173.0" prefHeight="24.0" prefWidth="129.0" text="Tipo Empresa">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

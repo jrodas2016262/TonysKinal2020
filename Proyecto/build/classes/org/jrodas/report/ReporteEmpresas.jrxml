@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresa" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bc8e2a17-00e3-4aa0-874e-30ac992896f1">
+	<property name="ireport.zoom" value="0.826446280991736"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="21"/>
+	<queryString>
+		<![CDATA[call sp_ListarEmpresas();]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DireccionEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Telefono" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802" splitType="Stretch">
+			<image>
+				<reportElement x="203" y="286" width="175" height="152" uuid="cbfd9e61-4a01-4184-bfc7-43fc3e58089b"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\Proyecto\\src\\org\\jrodas\\img\\Fondo Chef.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="285" height="79" uuid="2eb816e5-6d80-431d-90b3-050375ade9f5"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\Proyecto\\src\\org\\jrodas\\img\\Fondo madera.jpg"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement x="285" y="0" width="270" height="79" uuid="f069c88a-4978-4d74-9265-5b71576feac3"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\Proyecto\\src\\org\\jrodas\\img\\Fondo madera 2.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="165" y="8" width="254" height="68" uuid="d58751ca-50af-4799-b15d-949fc464e0fd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Viner Hand ITC" size="40"/>
+				</textElement>
+				<text><![CDATA[Tony´s Kinal]]></text>
+			</staticText>
+			<image>
+				<reportElement x="14" y="0" width="83" height="79" uuid="4213237f-24c2-4c43-96fc-fc99dbe0cc53"/>
+				<imageExpression><![CDATA["C:\\Users\\usuario\\Documents\\NetBeansProjects\\Proyecto\\src\\org\\jrodas\\img\\Chef.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="32" width="555" height="1" uuid="3462068e-6b1c-4bfa-8511-7faedb36fdf5"/>
+			</line>
+			<staticText>
+				<reportElement x="165" y="0" width="196" height="44" uuid="72f32a63-9487-4625-8326-4448ce624a3a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Viner Hand ITC" size="24"/>
+				</textElement>
+				<text><![CDATA[Empresas]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="30" backcolor="#00CCCC" uuid="d65b73e8-f0ee-4ee9-b53d-c9b1b35a3f42"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="3" y="4" width="100" height="20" uuid="4b224669-c0e9-4f9f-a5a0-f7999e3acc8e"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="4" width="100" height="20" uuid="bd221085-b49d-4952-9ae9-5e3e28fd45b4"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Nombre ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="4" width="100" height="20" uuid="b9347532-0ea2-4858-b00e-f2e493fb8fd1"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="4" width="100" height="20" uuid="d76266ec-66ea-48ae-92e7-663abb7f5757"/>
+				<textElement>
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Télefono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="14" y="1" width="100" height="20" uuid="b9f5bc77-4c71-4444-867e-3e835a0047e2"/>
+				<textFieldExpression><![CDATA[$F{codigoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="153" y="1" width="100" height="20" uuid="520901e6-ee96-44f4-b558-3a949d745601"/>
+				<textFieldExpression><![CDATA[$F{NombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="306" y="1" width="114" height="20" uuid="b33d39b1-0603-42da-9ba3-86c86481aedd"/>
+				<textFieldExpression><![CDATA[$F{DireccionEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="1" width="100" height="20" uuid="8cd04acb-92a8-4b0c-9486-2f67083e266e"/>
+				<textFieldExpression><![CDATA[$F{Telefono}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="22" width="555" height="1" uuid="db05bbbd-aefb-4880-888d-97642a1e3dbe"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

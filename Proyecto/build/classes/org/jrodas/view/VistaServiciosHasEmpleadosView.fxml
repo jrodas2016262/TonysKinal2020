@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="775.0" style="-fx-background-color: #FAFAFA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jrodas.controller.Servicios_has_EmpleadosController">
+   <children>
+      <BorderPane prefHeight="449.0" prefWidth="775.0" style="-fx-background-color: #2ace9d;" />
+      <ImageView fitHeight="417.0" fitWidth="747.0" layoutX="8.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" x="10.0">
+         <image>
+            <Image url="@../img/Fondo%20madera.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblServiciosHasEmpleados" layoutX="345.0" layoutY="30.0" onMouseClicked="#seleccionarElemento" prefHeight="395.0" prefWidth="412.0">
+        <columns>
+            <TableColumn fx:id="colCodigoSHE" prefWidth="72.0" text="Código SHE" />
+          <TableColumn fx:id="colServicios" prefWidth="63.0" text="Serivicios" />
+          <TableColumn fx:id="colEmpleado" prefWidth="62.0" text="Empleado" />
+            <TableColumn fx:id="colFecha" prefWidth="72.0" text="Fecha" />
+            <TableColumn fx:id="colHora" prefWidth="54.0" text="Hora" />
+            <TableColumn fx:id="colLugarEvento" prefWidth="88.0" text="Dirección" />
+        </columns>
+      </TableView>
+      <Label layoutX="80.0" layoutY="23.0" text="Servivios_has_Empleados">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="79.0" fitWidth="79.0" layoutX="230.0" layoutY="315.0" onMouseClicked="#RegresoPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Chef.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnNuevo" layoutX="30.0" layoutY="285.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="55.0" prefWidth="75.0" text="Nuevo">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnModificar" layoutX="30.0" layoutY="357.0" mnemonicParsing="false" onAction="#modificar" prefHeight="55.0" prefWidth="73.0" text="Modificar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="120.0" layoutY="285.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="55.0" prefWidth="73.0" text="Eliminar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCancelar" layoutX="120.0" layoutY="357.0" mnemonicParsing="false" onAction="#reporte" prefHeight="55.0" prefWidth="73.0" text="Cancelar">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <GridPane fx:id="grpFechaEvento" layoutX="32.0" layoutY="64.0" prefHeight="195.0" prefWidth="293.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="151.0" minWidth="15.0" prefWidth="151.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Código Servicio" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Código Empelado" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="132.0" text="Fecha evento" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="132.0" text="Hora evento" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="25.0" prefWidth="132.0" text="Lugar evento" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbCodigoEmpleado" prefHeight="30.0" prefWidth="610.0" promptText="Código Empleado" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cmbCodigoServicios" prefHeight="33.0" prefWidth="162.0" promptText="Código Servicio" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtLugarEvento" minHeight="30.0" promptText="Lugar del evento" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="txtHoraEvento" minHeight="30.0" promptText="Hora del evento" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtSHE" minHeight="30.0" promptText="Código S_H_E" GridPane.columnIndex="1" />
+            <Label text="Código SHE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
